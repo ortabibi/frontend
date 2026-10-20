@@ -1,0 +1,112 @@
+:root {
+  --bg: #fff;
+  --text: #4b4654;
+  --text-h: #08060d;
+  --border: #e5e4e7;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  color-scheme: light dark;
+  font: 16px/1.5 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16171d;
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --border: #2e303a;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-h);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Layout */
+
+.app {
+  min-height: 100vh;
+}
+
+.main-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Header */
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.app-header .logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-h);
+}
+
+.app-header nav {
+  display: flex;
+  gap: 4px;
+}
+
+.app-header nav a {
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: var(--text);
+}
+
+.app-header nav a:hover {
+  color: var(--text-h);
+}
+
+.app-header nav a.active {
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
